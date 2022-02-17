@@ -201,4 +201,10 @@
 #include "host/util/util.h"
 #endif
 
+#include "mdns.h"
+#include "lwip/apps/netbiosns.h"
+#include "esp_smartconfig.h"
+#include "esp_app_trace.h"
+#include "esp_https_ota.h"
+
 #endif
