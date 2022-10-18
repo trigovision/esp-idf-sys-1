@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
+list(APPEND compile_definitions "-DSNTP_COMP_ROUNDTRIP=1" "-DSNTP_CHECK_RESPONSE=2")
+
 include($ENV{IDF_PATH}/tools/cmake/idf.cmake)
 project(libespidf C)
 
