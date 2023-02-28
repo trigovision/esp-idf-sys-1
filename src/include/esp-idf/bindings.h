@@ -132,6 +132,7 @@
 #include "lwip/lwip_napt.h"
 #include "esp_sntp.h"
 #include "ping/ping_sock.h"
+#include "lwip/apps/netbiosns.h"
 #endif
 
 #ifdef ESP_IDF_COMP_MBEDTLS_ENABLED
@@ -155,6 +156,11 @@
 #ifdef ESP_IDF_COMP_ESP_HTTP_CLIENT_ENABLED
 #include "esp_http_client.h"
 #endif
+
+#if defined(ESP_IDF_COMP_APP_UPDATE_ENABLED) && defined(ESP_IDF_COMP_ESP_HTTP_CLIENT_ENABLED)
+#include "esp_https_ota.h"
+#endif
+
 
 #ifdef ESP_IDF_COMP_ESP_HTTP_SERVER_ENABLED
 #include "esp_http_server.h"
