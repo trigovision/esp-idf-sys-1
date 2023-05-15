@@ -1,0 +1,12 @@
+diff --git a/components/lwip/CMakeLists.txt b/components/lwip/CMakeLists.txt
+index acd587d..72c42b8 100644
+--- a/components/lwip/CMakeLists.txt
++++ b/components/lwip/CMakeLists.txt
+@@ -156,6 +156,7 @@ idf_component_register(SRCS "${srcs}"
+ 
+ # lots of LWIP source files evaluate macros that check address of stack variables
+ target_compile_options(${COMPONENT_LIB} PRIVATE -Wno-address)
++target_compile_options(${COMPONENT_LIB} PRIVATE -DSNTP_COMP_ROUNDTRIP=1 -DSNTP_CHECK_RESPONSE=2)
+ 
+ set_source_files_properties(
+     lwip/src/netif/ppp/ppp.c
