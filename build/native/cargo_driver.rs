@@ -24,6 +24,7 @@ use crate::common::{
     V_4_4_3_PATCHES, V_5_0_PATCHES,
 };
 use crate::config::{BuildConfig, ESP_IDF_GLOB_VAR_PREFIX, ESP_IDF_TOOLS_INSTALL_DIR_VAR};
+use crate::V_5_1_4_PATCHES;
 
 pub mod chip;
 pub mod config;
@@ -286,6 +287,7 @@ pub fn build() -> Result<EspIdfBuildOutput> {
             {
                 NO_PATCHES
             }
+            Ok((5, 1, 4)) => V_5_1_4_PATCHES,
             Ok((5, 0, _)) => V_5_0_PATCHES,
             Ok((5, _, _)) => NO_PATCHES,
             Ok((4, 4, _)) => V_4_4_3_PATCHES,
