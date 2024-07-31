@@ -513,8 +513,4 @@
 #include "driver/usb_serial_jtag.h"
 #endif
 
-#include "soc/rtc.h"
-#include "esp_chip_info.h"
-#include "esp_https_ota.h"
-
 // n
